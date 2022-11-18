@@ -1,0 +1,41 @@
+
+ -- Comando para criação do banco de dados Aula04
+CREATE DATABASE Aula04;
+
+ -- Comando para listar os bancos de dados
+SHOW DATABASES;
+
+ -- Comando para selecionar o banco de dados Aula4
+USE Aula04;  
+
+ -- Comando para criar a tabela profissoes
+CREATE TABLE profissoes (
+idProfissoes SMALLINT UNSIGNED NOT NULL,
+descricao VARCHAR (90) NOT NULL,
+
+PRIMARY KEY(idProfissoes)
+); 
+
+-- Comando para detalhar as tabelas contidas no banco de dados Aula04
+ SHOW TABLES Aula04;
+ 
+ -- Comando para detalhar a tabela profissoes
+DESCRIBE Profissoes;
+
+ -- Comando para alterar uma coluna da tabela profissoes
+ALTER TABLE profissoes
+CHANGE idProfissoes idProfissoes SMALLINT UNSIGNED AUTO_INCREMENT NOT NULL;
+
+ -- Comando para excluir uma coluna da tabela profissoes
+ALTER TABLE profissoes
+DROP descricao;
+
+ -- Comando para adicionar uma coluna na tabela profissoes
+ALTER TABLE profissoes
+ADD descricao VARCHAR(90) NOT NULL;
+
+ -- Comando excluir a tabela profissoes
+ DROP TABLE profissoes;
+ 
+  -- Comando excluir o banco de dados Aula04
+ DROP DATABASE Aula04;
